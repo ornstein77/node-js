@@ -85,7 +85,7 @@ export class ProductActor {
 
                 if (title) {
                 where.title = { contains: title };
-                res.json(Responder.internal());
+               
                 }
 
 
@@ -94,12 +94,12 @@ export class ProductActor {
                     where.id = {
                         in: filter_items
                     };
-                res.json(Responder.internal());
+                
                 }
             
                 const validFilters = ['id', 'date', 'price'];
                 if (!validFilters.includes(filter)) {
-                res.json(Responder.internal());
+                
                 }
             
                
